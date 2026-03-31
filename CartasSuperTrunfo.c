@@ -12,6 +12,7 @@ int main() {
   char cidade1[50];
   int populacao1, pontosturisticos1;
   float area1, PIB1;
+  float PIBpercapta1, densidade1;
 
   //carta 2
   char estado2 = 'B';
@@ -19,6 +20,7 @@ int main() {
   char cidade2[50];
   int populacao2, pontosturisticos2;
   float area2, PIB2;
+  float PIBpercapta2, densidade2;
 
   // Área para entrada de dados
   //cidade 1
@@ -37,6 +39,10 @@ int main() {
   printf("Digite a quantidade de pontos turisticos da cidade 1: ");
   scanf("%d", &pontosturisticos1);
 
+  //Cálculo de densidade populacional e PIB per capta
+  densidade1 = populacao1 / area1;
+  PIBpercapta1 = populacao1 / PIB1;
+
   //cidade 2
   printf("Digite o nome da cidade 2: ");
   scanf(" %s", cidade2);
@@ -53,6 +59,10 @@ int main() {
   printf("Digite a quantidade de pontos turisticos da cidade 2: ");
   scanf("%d", &pontosturisticos2);
 
+  //Cálculo de densidade populacional e PIB per capta
+  densidade2 = populacao2 / area2;
+  PIBpercapta2 = populacao2 / PIB2;
+
   // Área para exibição dos dados da cidade
   //Cidade 1
   printf("Carta 1:\n");
@@ -61,8 +71,10 @@ int main() {
   printf("Nome da Cidade: %s\n", cidade1);
   printf("População: %d habitantes\n", populacao1);
   printf("Área: %.2f km²\n", area1);
-  printf("PIB: %.2f bilhões de reais\n", PIB1);
+  printf("PIB: %.2f milhões de reais\n", PIB1);
   printf("Pontos turísticos: %d\n", pontosturisticos1);
+  printf("Densidade populacional: %.2f hab/km²\n", densidade1);
+  printf("PIB per capta: %.2f reais\n", PIBpercapta1);
 
   //pular linha entre uma cidade e outra quando der a resposta
   printf("\n");
@@ -75,8 +87,10 @@ int main() {
   printf("Nome da Cidade: %s\n", cidade2);
   printf("População: %d habitantes\n", populacao2);
   printf("Área: %.2f km²\n", area2);
-  printf("PIB: %.2f bilhões de reais\n", PIB2);
+  printf("PIB: %.2f milhões de reais\n", PIB2);
   printf("Pontos turísticos: %d\n", pontosturisticos2);
+  printf("Densidade populacional: %.2f  hab/km²\n", densidade2);
+  printf("PIB per capta: %.2f reais\n", PIBpercapta2);
 
 return 0;
 } 
