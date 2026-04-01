@@ -13,6 +13,7 @@ int main() {
   int populacao1, pontosturisticos1;
   float area1, PIB1;
   float PIBpercapta1, densidade1;
+  float superpoder1;
 
   //carta 2
   char estado2 = 'B';
@@ -21,6 +22,7 @@ int main() {
   int populacao2, pontosturisticos2;
   float area2, PIB2;
   float PIBpercapta2, densidade2;
+  float superpoder2;
 
   // Área para entrada de dados
   //cidade 1
@@ -63,6 +65,11 @@ int main() {
   densidade2 = populacao2 / area2;
   PIBpercapta2 = populacao2 / PIB2;
 
+  //Super poder
+  superpoder1 = populacao1 + pontosturisticos1 + area1 + PIB1 + densidade1 + PIBpercapta1;
+  superpoder2 = populacao2 + pontosturisticos2 + area2 + PIB2 + densidade2 + PIBpercapta2;
+
+
   // Área para exibição dos dados da cidade
   //Cidade 1
   printf("Carta 1:\n");
@@ -75,6 +82,7 @@ int main() {
   printf("Pontos turísticos: %d\n", pontosturisticos1);
   printf("Densidade populacional: %.2f hab/km²\n", densidade1);
   printf("PIB per capta: %.2f reais\n", PIBpercapta1);
+  printf("Nível do super poder: %.2f\n", superpoder1);
 
   //pular linha entre uma cidade e outra quando der a resposta
   printf("\n");
@@ -91,6 +99,20 @@ int main() {
   printf("Pontos turísticos: %d\n", pontosturisticos2);
   printf("Densidade populacional: %.2f  hab/km²\n", densidade2);
   printf("PIB per capta: %.2f reais\n", PIBpercapta2);
+  printf("Nível do super poder: %.2f\n", superpoder2);
+
+  //Comparação das 2 cidades
+  printf("\n");
+  printf("*** Comparação das cidades ***\n");
+  printf("Se o resultado for 1, a cidade 1 ganhou, se for 0, a ciade 2 ganhou.\n");
+  printf("População: %d\n", populacao1 > populacao2);
+  printf("Área: %d\n", area1 > area2);
+  printf("PIB: %d\n", PIB1 > PIB2);
+  printf("Pontos turísticos: %d\n", pontosturisticos1 > pontosturisticos2);
+  printf("Densidade: %d\n", densidade1 < densidade2);
+  printf("PIB per capita: %d\n", PIBpercapta1 > PIBpercapta2);
+  printf("Super poder: %d\n", superpoder1 > superpoder2);
+  printf("Você chegou ao fim do jogo, obrigado por jogar!\n");
 
 return 0;
 } 
