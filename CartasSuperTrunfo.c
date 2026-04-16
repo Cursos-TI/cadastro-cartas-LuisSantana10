@@ -7,6 +7,7 @@
 int main() {
   //Variáveis gerais
   int resultado1, resultado2;
+  int escolhaFinal;
 
   // Área para definição das variáveis para armazenar as propriedades das cidades
   // carta 1
@@ -27,6 +28,9 @@ int main() {
   float PIBpercapta2, densidade2;
   float superpoder2;
 
+
+do
+{  
   // Área para entrada de dados
   //cidade 1
   printf("Digite o nome do estado 1: ");
@@ -93,7 +97,7 @@ int main() {
   printf("Nome da Cidade: %s\n", cidade1);
   printf("População: %d habitantes\n", populacao1);
   printf("Área: %.2f km²\n", area1);
-  printf("PIB: %.2f milhões de reais\n", PIB1);
+  printf("PIB: R$%.2f\n", PIB1);
   printf("Pontos turísticos: %d\n", pontosturisticos1);
   printf("Densidade populacional: %.2f hab/km²\n", densidade1);
   printf("PIB per capta: %.2f reais\n", PIBpercapta1);
@@ -110,7 +114,7 @@ int main() {
   printf("Nome da Cidade: %s\n", cidade2);
   printf("População: %d habitantes\n", populacao2);
   printf("Área: %.2f km²\n", area2);
-  printf("PIB: %.2f milhões de reais\n", PIB2);
+  printf("PIB: R$%.2f\n", PIB2);
   printf("Pontos turísticos: %d\n", pontosturisticos2);
   printf("Densidade populacional: %.2f  hab/km²\n", densidade2);
   printf("PIB per capta: %.2f reais\n", PIBpercapta2);
@@ -174,8 +178,8 @@ int main() {
   //PIB
     case 3:
             printf("Atributo: PIB\n");
-    printf("Carta 1 - %s(%s): %.2f\n", estado1, cidade1, PIB1);
-    printf("Carta 2 - %s(%s): %.2f\n", estado2, cidade2, PIB2);
+    printf("Carta 1 - %s(%s): R$%.2f\n", estado1, cidade1, PIB1);
+    printf("Carta 2 - %s(%s): R$%.2f\n", estado2, cidade2, PIB2);
     resultado1 = PIB1 > PIB2 ? 1 : 0;
   break;
 
@@ -239,8 +243,8 @@ int main() {
   //PIB
     case 3:
             printf("Atributo: PIB\n");
-    printf("Carta 1 - %s(%s): %.2f\n", estado1, cidade1, PIB1);
-    printf("Carta 2 - %s(%s): %.2f\n", estado2, cidade2, PIB2);
+    printf("Carta 1 - %s(%s): R$%.2f\n", estado1, cidade1, PIB1);
+    printf("Carta 2 - %s(%s): R$%.2f\n", estado2, cidade2, PIB2);
     resultado2 = PIB1 > PIB2 ? 1 : 0;
   break;
 
@@ -296,6 +300,27 @@ int main() {
 
 
   printf("Você chegou ao fim do jogo, obrigado por jogar!\n");
+  
+  
+  printf("1. Sair\n");
+  printf("2. Recomeçar\n");
+  scanf(" %d", &escolhaFinal);
+  switch (escolhaFinal)
+  {
+  case 1:
+    printf("Saindo...\n");
+    break;
+  case 2:
+    printf("Recomeçando...\n");
+    break;
+  
+  default:
+  printf("Opção inválida.\n");
+    break;
+  }
+
+
+} while (escolhaFinal != 1);
 
 return 0;
 }
